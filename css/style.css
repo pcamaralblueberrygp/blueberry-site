@@ -1,465 +1,476 @@
 /* =========================
-FONTS
+   FONTES
 ========================= */
 
 @font-face {
-font-family: 'BlueberryTitle';
-src: url('../fonts/FUTRFW.TTF');
+    font-family: 'Future';
+    src: url('../fonts/FUTRFW.TTF');
+}
+
+@font-face {
+    font-family: 'Secrcode';
+    src: url('../fonts/secrcode.ttf');
 }
 
 /* =========================
-VARIABLES
+   RESET
 ========================= */
 
-:root{
---primary:#213351;
---secondary:#355f85;
---accent:#9cc126;
---light:#f8fafc;
---white:#ffffff;
---text:#334155;
---border:#e5e7eb;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f8fa;
+    color: #263858;
+    font-family: 'Secrcode', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* =========================
-RESET
+   CORES
 ========================= */
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial, Helvetica, sans-serif;
-color:var(--text);
-background:#fff;
-line-height:1.7;
-}
-
-img{
-max-width:100%;
-display:block;
-}
-
-a{
-text-decoration:none;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:0 auto;
+:root {
+    --blue: #263858;
+    --blue-light: #3f6795;
+    --green: #a4c61b;
+    --white: #ffffff;
+    --gray: #f7f8fa;
 }
 
 /* =========================
-HEADER
+   CONTAINER
 ========================= */
 
-.header{
-background:#fff;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.05);
-}
-
-.header-container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 0;
-}
-
-.logo{
-height:58px;
-width:auto;
-}
-
-.btn-header{
-background:var(--accent);
-color:#fff;
-padding:12px 22px;
-border-radius:8px;
-font-weight:700;
-transition:.3s;
-}
-
-.btn-header:hover{
-transform:translateY(-2px);
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* =========================
-HERO
+   HEADER
 ========================= */
 
-.hero{
-position:relative;
-
-```
-background:
-linear-gradient(
-    rgba(33,51,81,.88),
-    rgba(33,51,81,.88)
-),
-url('../img/banner-linkedin.jpeg');
-
-background-size:cover;
-background-position:center;
-
-color:#fff;
-```
-
+.header {
+    background: white;
+    border-bottom: 1px solid #ececec;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-.hero-content{
-min-height:700px;
-
-```
-display:grid;
-grid-template-columns:1.2fr .8fr;
-align-items:center;
-gap:80px;
-```
-
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
 }
 
-.tag{
-display:inline-block;
-background:rgba(255,255,255,.15);
-border:1px solid rgba(255,255,255,.2);
-padding:10px 18px;
-border-radius:999px;
-font-size:14px;
-margin-bottom:24px;
+.logo-header {
+    height: 70px;
+    width: auto;
 }
 
-.hero h1{
-font-size:clamp(40px,5vw,64px);
-line-height:1.1;
-font-weight:800;
-margin-bottom:24px;
-letter-spacing:-1px;
+.btn-header {
+    background: var(--green);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: .3s;
 }
 
-.hero p{
-font-size:18px;
-max-width:650px;
-opacity:.95;
-margin-bottom:36px;
-}
-
-.hero-buttons{
-display:flex;
-gap:16px;
-flex-wrap:wrap;
-}
-
-.btn-primary{
-background:var(--accent);
-color:#fff;
-padding:16px 30px;
-border-radius:8px;
-font-weight:700;
-}
-
-.btn-secondary{
-border:1px solid rgba(255,255,255,.4);
-color:#fff;
-padding:16px 30px;
-border-radius:8px;
-}
-
-.hero-info{
-background:rgba(255,255,255,.08);
-padding:32px;
-border-radius:16px;
-backdrop-filter:blur(5px);
-}
-
-.hero-info ul{
-margin-top:15px;
-padding-left:20px;
-}
-
-.hero-info li{
-margin-bottom:10px;
+.btn-header:hover {
+    transform: translateY(-2px);
 }
 
 /* =========================
-SECTIONS
+   HERO
 ========================= */
 
-section{
-padding:90px 0;
+.hero {
+    position: relative;
+    min-height: 700px;
+    background:
+        linear-gradient(
+            rgba(38,56,88,.85),
+            rgba(38,56,88,.85)
+        ),
+        url('../img/banner-linkedin.jpeg');
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
 }
 
-.section-title{
-text-align:center;
-color:var(--primary);
-font-size:42px;
-margin-bottom:14px;
-font-weight:800;
-letter-spacing:-1px;
+.hero-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+    color: white;
 }
 
-.section-subtitle{
-text-align:center;
-max-width:700px;
-margin:0 auto 50px;
+.hero-badge {
+    color: var(--green);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-family: 'Future';
+    font-size: 3.4rem;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 16px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: white;
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.hero-right ul {
+    list-style: none;
+}
+
+.hero-right li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,.15);
 }
 
 /* =========================
-CASES
+   SECTIONS
 ========================= */
 
-.cases{
-background:var(--light);
+section {
+    padding: 100px 0;
 }
 
-.cases-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
+section h2 {
+    font-family: 'Future';
+    font-size: 2.6rem;
+    text-align: center;
+    color: var(--blue);
+    margin-bottom: 20px;
 }
 
-.case-card{
-background:#fff;
-padding:30px;
-border-radius:16px;
-box-shadow:0 3px 15px rgba(0,0,0,.05);
-}
-
-.case-card h3{
-color:var(--accent);
-font-size:42px;
-margin-bottom:12px;
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 50px;
 }
 
 /* =========================
-CLIENTES
+   CASES
 ========================= */
 
-.clients{
-background:#fff;
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
 }
 
-.clients-grid{
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-gap:30px;
+.case-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.05);
 }
 
-.client-logo{
-width:190px;
-height:110px;
-
-```
-background:#fff;
-
-border-radius:14px;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-box-shadow:0 2px 12px rgba(0,0,0,.05);
-```
-
+.case-number {
+    color: var(--green);
+    font-size: 2rem;
+    font-family: 'Future';
 }
 
-.client-logo.dark{
-background:var(--primary);
-}
-
-.client-logo img{
-max-width:140px;
-max-height:65px;
-width:auto;
-height:auto;
+.case-card h3 {
+    font-family: 'Future';
+    color: var(--blue);
+    margin: 12px 0;
+    font-size: 1.6rem;
 }
 
 /* =========================
-SERVICES
+   CLIENTES
 ========================= */
 
-.services-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
+.clients {
+    background: white;
 }
 
-.service-card{
-border:1px solid var(--border);
-padding:30px;
-border-radius:14px;
+.clients-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
-.service-card h3{
-color:var(--primary);
-margin-bottom:12px;
+.client-card {
+    width: 180px;
+    height: 120px;
+    background: white;
+    border: 1px solid #ececec;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.client-card img {
+    max-width: 130px;
+    max-height: 70px;
+    object-fit: contain;
+}
+
+.client-card-dark {
+    background: var(--blue);
 }
 
 /* =========================
-ABOUT
+   MERCADOS
 ========================= */
 
-.about{
-background:var(--light);
+.market-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
 }
 
-.about-content{
-display:grid;
-grid-template-columns:320px 1fr;
-gap:50px;
-align-items:center;
-}
-
-.about-photo{
-border-radius:16px;
-overflow:hidden;
-}
-
-.about-text h2{
-color:var(--primary);
-font-size:42px;
-margin-bottom:20px;
-letter-spacing:-1px;
-}
-
-.about-text p{
-margin-bottom:16px;
+.market-tags span {
+    background: white;
+    border: 1px solid #e6e6e6;
+    padding: 12px 22px;
+    border-radius: 999px;
 }
 
 /* =========================
-CONTACT
+   SERVIÇOS
 ========================= */
 
-.contact{
-background:var(--primary);
-color:#fff;
-text-align:center;
+.services {
+    background: white;
 }
 
-.contact h2{
-font-size:48px;
-margin-bottom:20px;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
 }
 
-.contact p{
-max-width:700px;
-margin:0 auto 35px;
+.service-card {
+    background: #f7f8fa;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.service-card h3 {
+    color: var(--blue);
+    margin-bottom: 12px;
+    font-family: 'Future';
 }
 
 /* =========================
-FOOTER
+   SOBRE
 ========================= */
 
-.footer{
-background:#0f172a;
-color:#fff;
-padding:60px 0;
+.about-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.footer-content{
-text-align:center;
+.about-image img {
+    border-radius: 20px;
 }
 
-.footer-logo{
-width:240px;
-margin:0 auto 30px;
+.about-content h2 {
+    text-align: left;
 }
 
-.footer p{
-margin-bottom:10px;
-opacity:.9;
+.about-content p {
+    margin-bottom: 20px;
 }
 
 /* =========================
-WHATSAPP FLOAT
+   FORM
 ========================= */
 
-.whatsapp-float{
-position:fixed;
-
-```
-right:25px;
-bottom:25px;
-
-width:70px;
-height:70px;
-
-z-index:9999;
-```
-
+.contact {
+    background: var(--blue);
+    color: white;
 }
 
-.whatsapp-float img{
-width:100%;
-height:100%;
-object-fit:contain;
+.contact h2 {
+    color: white;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: auto;
+
+    display: grid;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    min-height: 160px;
+}
+
+.contact-form button {
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 /* =========================
-RESPONSIVE
+   CTA FINAL
 ========================= */
 
-@media(max-width:992px){
-
-```
-.hero-content,
-.about-content{
-    grid-template-columns:1fr;
+.cta-final {
+    text-align: center;
 }
 
-.hero{
-    text-align:center;
+.cta-final p {
+    max-width: 800px;
+    margin: 0 auto 30px;
 }
 
-.hero p{
-    margin-left:auto;
-    margin-right:auto;
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #081327;
+    color: white;
+    padding: 70px 0;
 }
 
-.cases-grid,
-.services-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-```
-
+.footer-content {
+    text-align: center;
 }
 
-@media(max-width:768px){
-
-```
-.header-container{
-    flex-direction:column;
-    gap:15px;
+.footer-logo {
+    height: 80px;
+    width: auto;
+    margin: 0 auto 30px;
 }
 
-.cases-grid,
-.services-grid{
-    grid-template-columns:1fr;
+.footer-content p {
+    margin: 10px 0;
 }
 
-.hero h1{
-    font-size:42px;
+.footer-divider {
+    width: 200px;
+    height: 1px;
+    background: rgba(255,255,255,.2);
+    margin: 30px auto;
 }
 
-.section-title{
-    font-size:34px;
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 999;
 }
 
-.contact h2{
-    font-size:36px;
+.whatsapp-float img {
+    width: 60px;
+    height: 60px;
 }
-```
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero-content,
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .cases-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .logo-header {
+        height: 50px;
+    }
 
 }
