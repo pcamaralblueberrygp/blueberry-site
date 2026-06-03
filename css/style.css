@@ -497,3 +497,38 @@ h2{
     }
 }
 ```
+/* PÁGINAS LEGAIS */
+
+.legal-page {
+    padding: 80px 0;
+    background: #f5f7fa;
+    min-height: calc(100vh - 120px);
+}
+
+.legal-container {
+    max-width: 900px;
+}
+
+.legal-page h1 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #243b6b;
+}
+
+.legal-page h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #243b6b;
+    font-size: 24px;
+}
+
+.legal-page p,
+.legal-page li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.legal-page ul {
+    padding-left: 20px;
+}
