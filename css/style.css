@@ -528,3 +528,17 @@ h2{
 .footer-links span{
     color:rgba(255,255,255,.35);
 }
+
+.footer-link{
+    color:#ffffff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-link:visited{
+    color:#ffffff;
+}
+
+.footer-link:hover{
+    color:#B3D115;
+}
