@@ -529,14 +529,13 @@ h2{
     color:rgba(255,255,255,.35);
 }
 
-.footer-link{
+.footer-link,
+.footer-link:link,
+.footer-link:visited,
+.footer-link:active{
     color:#ffffff;
     text-decoration:none;
-    transition:.3s;
-}
-
-.footer-link:visited{
-    color:#ffffff;
+    transition:all .3s ease;
 }
 
 .footer-link:hover{
