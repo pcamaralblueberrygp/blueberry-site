@@ -449,27 +449,6 @@ h2{
    RESPONSIVO
 ========================= */
 
-@media(max-width:1024px){
-
-    .cases-grid,
-    .services-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .about-container{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .about-content h2{
-        text-align:center;
-    }
-
-    .hero h1{
-        font-size:2.8rem;
-    }
-}
-
 @media(max-width:768px){
 
     .header-container{
@@ -478,23 +457,40 @@ h2{
         padding:20px 0;
     }
 
+    .logo-header{
+        height:65px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding-top:220px;
+        padding-bottom:80px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+        line-height:1.15;
+    }
+
+    .hero p{
+        font-size:1.05rem;
+    }
+
     .cases-grid,
     .services-grid{
         grid-template-columns:1fr;
     }
 
-    .hero h1{
-        font-size:2.2rem;
-    }
-
-    .logo-header{
-        height:65px;
-    }
-
     .whatsapp-float img{
-        width:90px;
-        height:90px;
+        width:70px;
+        height:70px;
     }
+
+    .whatsapp-float{
+        right:15px;
+        bottom:15px;
+    }
+
 }
 ```
 /* PÁGINAS LEGAIS */
