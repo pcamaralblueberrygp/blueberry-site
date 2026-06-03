@@ -524,3 +524,7 @@ h2{
     color:#B3D115;
     opacity:1;
 }
+
+.footer-links span{
+    color:rgba(255,255,255,.35);
+}
