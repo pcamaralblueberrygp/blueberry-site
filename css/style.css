@@ -499,36 +499,28 @@ h2{
 ```
 /* PÁGINAS LEGAIS */
 
-.legal-page {
-    padding: 80px 0;
-    background: #f5f7fa;
-    min-height: calc(100vh - 120px);
+.footer-links{
+    margin:25px 0;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
-.legal-container {
-    max-width: 900px;
+.footer-links a{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    opacity:.85;
+    transition:.3s;
 }
 
-.legal-page h1 {
-    font-size: 42px;
-    margin-bottom: 40px;
-    color: #243b6b;
+.footer-links a:visited{
+    color:#ffffff;
 }
 
-.legal-page h2 {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    color: #243b6b;
-    font-size: 24px;
-}
-
-.legal-page p,
-.legal-page li {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #444;
-}
-
-.legal-page ul {
-    padding-left: 20px;
+.footer-links a:hover{
+    color:#B3D115;
+    opacity:1;
 }
