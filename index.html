@@ -359,9 +359,13 @@ Fashion • Casa e Decoração • Educação • Seguros • Financeiro • Sa�
 <input type="tel"
        id="telefone"
        name="telefone"
-       placeholder="+55 11 99999-9999"
+       placeholder="(99) 99999-9999"
        required>
-
+                
+<input type="hidden"
+       name="telefone"
+       id="telefone_limpo">
+                
 <input type="text"
        name="empresa"
        placeholder="Empresa">
@@ -474,6 +478,42 @@ Fashion • Casa e Decoração • Educação • Seguros • Financeiro • Sa�
 
     </a>
 
+<script>
+const telefone = document.getElementById('telefone');
+const telefoneLimpo = document.getElementById('telefone_limpo');
+
+telefone.addEventListener('input', function () {
+
+    let valor = this.value.replace(/\D/g, '');
+
+    if (valor.length > 11) {
+        valor = valor.substring(0, 11);
+    }
+
+    if (valor.length > 10) {
+        valor = valor.replace(
+            /^(\d{2})(\d{5})(\d{0,4}).*/,
+            '($1) $2-$3'
+        );
+    } else {
+        valor = valor.replace(
+            /^(\d{2})(\d{4})(\d{0,4}).*/,
+            '($1) $2-$3'
+        );
+    }
+
+    this.value = valor;
+});
+
+document.querySelector('.contact-form')
+    .addEventListener('submit', function () {
+
+        let numero = telefone.value.replace(/\D/g, '');
+
+        telefoneLimpo.value = '55' + numero;
+    });
+</script>
+    
 </body>
 
 </html>
