@@ -451,23 +451,39 @@ h2{
 
 @media(max-width:768px){
 
+    body{
+        overflow-x:hidden;
+    }
+
+    .header{
+        position:relative;
+    }
+
     .header-container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:20px;
-    padding:20px;
-}
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:20px;
+        padding:20px;
+        min-height:auto;
+    }
 
     .logo-header{
-    height:auto;
-    max-width:280px;
-    width:100%;
-}
+        width:100%;
+        max-width:260px;
+        height:auto;
+    }
+
+    .btn-header{
+        width:100%;
+        max-width:260px;
+        text-align:center;
+    }
+
     .hero{
         min-height:auto;
-        padding-top:220px;
+        padding-top:80px;
         padding-bottom:80px;
     }
 
@@ -485,9 +501,8 @@ h2{
         grid-template-columns:1fr;
     }
 
-    .whatsapp-float img{
-        width:70px;
-        height:70px;
+    .about-container{
+        grid-template-columns:1fr;
     }
 
     .whatsapp-float{
@@ -495,12 +510,13 @@ h2{
         bottom:15px;
     }
 
-body{
-    overflow-x:hidden;
+    .whatsapp-float img{
+        width:70px;
+        height:70px;
+    }
+
 }
-   
-}
-```
+
 /* PÁGINAS LEGAIS */
 
 .footer-links{
