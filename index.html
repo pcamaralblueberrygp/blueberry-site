@@ -351,9 +351,8 @@ Fashion • Casa e Decoração • Educação • Seguros • Financeiro • Sa�
                 Envie uma mensagem e entrarei em contato.
             </p>
 
-            <form action="https://formsubmit.co/contato@blueberrygp.com.br"
-                method="POST"
-                class="contact-form">
+            <form id="contactForm"
+      class="contact-form">
 
                 <input type="text"
                     name="nome"
@@ -371,10 +370,6 @@ Fashion • Casa e Decoração • Educação • Seguros • Financeiro • Sa�
        placeholder="(99) 99999-9999"
        required>
                 
-<input type="hidden"
-       name="telefone"
-       id="telefone_limpo">
-                
 <input type="text"
        name="empresa"
        placeholder="Empresa">
@@ -388,7 +383,11 @@ Fashion • Casa e Decoração • Educação • Seguros • Financeiro • Sa�
                 </button>
            
                 <div id="form-message"></div>
-          
+    
+                <p id="successMessage"
+               style="display:none;color:#fff;margin-top:20px;">
+                Obrigado! Recebi sua mensagem e entrarei em contato em breve.
+                </p>
             </form>
 
         </div>
@@ -489,64 +488,113 @@ Fashion • Casa e Decoração • Educação • Seguros • Financeiro • Sa�
 
     </a>
 
-<script>
+    <script>
+
+/* =====================================
+   MÁSCARA DE TELEFONE
+===================================== */
+
 const telefone = document.getElementById('telefone');
-const telefoneLimpo = document.getElementById('telefone_limpo');
 
-telefone.addEventListener('input', function () {
+telefone.addEventListener('input', function(){
 
-    let valor = this.value.replace(/\D/g, '');
+    let valor = this.value.replace(/\D/g,'');
 
-    if (valor.length > 11) {
-        valor = valor.substring(0, 11);
+    if(valor.length > 11){
+        valor = valor.substring(0,11);
     }
 
-    if (valor.length > 10) {
+    if(valor.length > 10){
+
         valor = valor.replace(
             /^(\d{2})(\d{5})(\d{0,4}).*/,
             '($1) $2-$3'
         );
+
     } else {
+
         valor = valor.replace(
             /^(\d{2})(\d{4})(\d{0,4}).*/,
             '($1) $2-$3'
         );
+
     }
 
     this.value = valor;
-});
-
-document.querySelector('.contact-form')
-    .addEventListener('submit', function () {
-
-        let numero = telefone.value.replace(/\D/g, '');
-
-        telefoneLimpo.value = '55' + numero;
-    });
-</script>
-
-script>
-
-const form = document.querySelector('.contact-form');
-const message = document.getElementById('form-message');
-
-form.addEventListener('submit', function() {
-
-    setTimeout(function(){
-
-        message.innerHTML =
-        'Obrigado! Recebi sua mensagem e entrarei em contato em breve.';
-
-        message.style.color = '#A4C61B';
-        message.style.marginTop = '20px';
-        message.style.fontWeight = '700';
-
-    }, 1000);
 
 });
 
+
+/* =====================================
+   GOOGLE SHEETS + GTM
+===================================== */
+
+const SCRIPT_URL =
+'https://script.google.com/macros/s/AKfycbyy1jjJpDU0F7dreYTVYcLnqCyNnf0wxOpRFAixxSRWEGCU0_IX6_DFjwUD5diwlnES/exec';
+
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', async function(e){
+
+    e.preventDefault();
+
+    const telefoneLimpo = document
+        .getElementById('telefone')
+        .value
+        .replace(/\D/g,'');
+
+    const dados = {
+
+        nome: form.nome.value,
+        email: form.email.value,
+        telefone: '55' + telefoneLimpo,
+        empresa: form.empresa.value,
+        mensagem: form.mensagem.value
+
+    };
+
+    console.log('Lead enviado:', dados);
+
+    try {
+
+        await fetch(SCRIPT_URL, {
+
+            method: 'POST',
+
+            headers: {
+                'Content-Type': 'application/json'
+            },
+
+            body: JSON.stringify(dados)
+
+        });
+
+        window.dataLayer = window.dataLayer || [];
+
+        dataLayer.push({
+            event: 'form_submit'
+        });
+
+        document
+            .getElementById('successMessage')
+            .style.display = 'block';
+
+        form.reset();
+
+    } catch(error){
+
+        console.error(error);
+
+        alert(
+            'Erro ao enviar. Tente novamente.'
+        );
+
+    }
+
+});
+
 </script>
-    
+
 </body>
 
 </html>
