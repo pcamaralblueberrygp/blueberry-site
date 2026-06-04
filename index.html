@@ -557,17 +557,14 @@ form.addEventListener('submit', async function(e){
 
     try {
 
-        await fetch(SCRIPT_URL, {
-
-            method: 'POST',
-
-            headers: {
-                'Content-Type': 'application/json'
-            },
-
-            body: JSON.stringify(dados)
-
-        });
+        await fetch(SCRIPT_URL,{
+    method:'POST',
+    mode:'no-cors',
+    headers:{
+        'Content-Type':'text/plain'
+    },
+    body:JSON.stringify(dados)
+});
 
         window.dataLayer = window.dataLayer || [];
 
