@@ -386,7 +386,9 @@ Fashion • Casa e Decoração • Educação • Seguros • Financeiro • Sa�
                 <button type="submit">
                     Enviar mensagem
                 </button>
-
+           
+                <div id="form-message"></div>
+          
             </form>
 
         </div>
@@ -521,6 +523,28 @@ document.querySelector('.contact-form')
 
         telefoneLimpo.value = '55' + numero;
     });
+</script>
+
+script>
+
+const form = document.querySelector('.contact-form');
+const message = document.getElementById('form-message');
+
+form.addEventListener('submit', function() {
+
+    setTimeout(function(){
+
+        message.innerHTML =
+        'Obrigado! Recebi sua mensagem e entrarei em contato em breve.';
+
+        message.style.color = '#A4C61B';
+        message.style.marginTop = '20px';
+        message.style.fontWeight = '700';
+
+    }, 1000);
+
+});
+
 </script>
     
 </body>
