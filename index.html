@@ -559,9 +559,24 @@ const lastName = partesNome.length > 1
     
 console.log(window.dataLayer);
     
-const geoData = window.dataLayer.find(
-    item => item.event === 'geo_ipinfo'
-) || {};
+let geoData = {};
+
+if (window.dataLayer) {
+
+    for (let i = 0; i < window.dataLayer.length; i++) {
+
+        if (window.dataLayer[i].event === 'geo_ipinfo') {
+
+            geoData = window.dataLayer[i];
+            break;
+
+        }
+
+    }
+
+}
+
+console.log('GeoData:', geoData);
 
 const dados = {
     nome: form.nome.value,
@@ -598,10 +613,9 @@ const dados = {
     fbclid: params.get('fbclid') || '',
 
     cep: geoData.geo_cep || '',
-    cidade: geoData.geo_city || '',
-    estado: geoData.geo_uf || '',
-    pais: geoData.geo_country || '',
-    uf: geoData.geo_uf || ''
+cidade: geoData.geo_city || '',
+estado: geoData.geo_uf || '',
+pais: geoData.geo_country || '',
 };
 
 console.log('Lead enviado:', dados);
