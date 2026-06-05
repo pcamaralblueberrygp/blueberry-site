@@ -543,10 +543,6 @@ form.addEventListener('submit', async function(e){
     .value
     .replace(/\D/g,'');
 
-const params = new URLSearchParams(
-    window.location.search
-);
-
 const nomeCompleto = form.nome.value.trim();
 
 const partesNome = nomeCompleto.split(' ');
@@ -601,25 +597,25 @@ const dados = {
     landing_page: window.location.href,
 
     utm_source:
-        params.get('utm_source') || '',
+        localStorage.getItem('utm_source') || '',
 
     utm_medium:
-        params.get('utm_medium') || '',
+        localStorage.getItem('utm_medium') || '',
 
     utm_campaign:
-        params.get('utm_campaign') || '',
+        localStorage.getItem('utm_campaign') || '',
 
     utm_term:
-        params.get('utm_term') || '',
+        localStorage.getItem('utm_term') || '',
 
     utm_content:
-        params.get('utm_content') || '',
+        localStorage.getItem('utm_content') || '',
 
     gclid:
-        params.get('gclid') || '',
+        localStorage.getItem('gclid') || '',
 
     fbclid:
-        params.get('fbclid') || '',
+        localStorage.getItem('fbclid') || '',
 
     cep:
         geoData.geo_cep || '',
