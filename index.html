@@ -534,14 +534,22 @@ const SCRIPT_URL =
 
 const form = document.getElementById('contactForm');
 
+let formEnviado = false;
+
 form.addEventListener('submit', async function(e){
 
     e.preventDefault();
 
-   const telefoneLimpo = document
-    .getElementById('telefone')
-    .value
-    .replace(/\D/g,'');
+    if(formEnviado){
+        return;
+    }
+
+    formEnviado = true;
+
+    const telefoneLimpo = document
+        .getElementById('telefone')
+        .value
+        .replace(/\D/g,'');
 
 const nomeCompleto = form.nome.value.trim();
 
@@ -648,9 +656,11 @@ console.log(
 
         window.dataLayer = window.dataLayer || [];
 
-        dataLayer.push({
-            event: 'form_submit'
-        });
+        console.count('FORM_SUBMIT_PUSH');
+
+dataLayer.push({
+    event: 'form_submit'
+});
 
         document
             .getElementById('successMessage')
@@ -658,15 +668,19 @@ console.log(
 
         form.reset();
 
-    } catch(error){
+    } 
+    
+    catch(error){
 
-        console.error(error);
+    formEnviado = false;
 
-        alert(
-            'Erro ao enviar. Tente novamente.'
-        );
+    console.error(error);
 
-    }
+    alert(
+        'Erro ao enviar. Tente novamente.'
+    );
+
+}
 
 });
 
