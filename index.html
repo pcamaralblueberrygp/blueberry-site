@@ -556,7 +556,9 @@ const firstName = partesNome[0]
 const lastName = partesNome.length > 1
     ? partesNome[partesNome.length - 1].toLowerCase()
     : '';
-
+    
+console.log(window.dataLayer);
+    
 const dados = {
 
     nome: nomeCompleto,
@@ -565,7 +567,7 @@ const dados = {
     last_name: lastName,
 
     email: form.email.value,
-    telefone: '55' + telefone,
+    telefone: '55' + telefoneLimpo,
 
     empresa: form.empresa.value,
     mensagem: form.mensagem.value,
@@ -581,11 +583,11 @@ const dados = {
     gclid: params.get('gclid') || '',
     fbclid: params.get('fbclid') || '',
 
-    cidade: '',
-    estado: '',
-    uf: '',
-    pais: '',
-    cep: ''
+    cidade: window.geo_city || '',
+estado: window.geo_uf || '',
+uf: window.geo_uf || '',
+pais: window.geo_country || '',
+cep: window.geo_cep || ''
 
 };
     console.log('Lead enviado:', dados);
