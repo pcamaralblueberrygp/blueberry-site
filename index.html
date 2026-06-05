@@ -559,17 +559,31 @@ const lastName = partesNome.length > 1
     
 console.log(window.dataLayer);
     
+const geoData = window.dataLayer.find(
+    item => item.event === 'geo_ipinfo'
+) || {};
+
 const dados = {
+    nome: form.nome.value,
 
-    nome: nomeCompleto,
+    first_name: form.nome.value
+        .trim()
+        .split(' ')[0]
+        .toLowerCase(),
 
-    first_name: firstName,
-    last_name: lastName,
+    last_name: form.nome.value
+        .trim()
+        .split(' ')
+        .slice(1)
+        .join(' ')
+        .toLowerCase(),
 
-    email: form.email.value,
-    telefone: '55' + telefoneLimpo,
+    email: form.email.value.toLowerCase(),
+
+    telefone: '55' + telefone,
 
     empresa: form.empresa.value,
+
     mensagem: form.mensagem.value,
 
     landing_page: window.location.href,
@@ -583,14 +597,14 @@ const dados = {
     gclid: params.get('gclid') || '',
     fbclid: params.get('fbclid') || '',
 
-    cidade: window.geo_city || '',
-estado: window.geo_uf || '',
-uf: window.geo_uf || '',
-pais: window.geo_country || '',
-cep: window.geo_cep || ''
-
+    cep: geoData.geo_cep || '',
+    cidade: geoData.geo_city || '',
+    estado: geoData.geo_uf || '',
+    pais: geoData.geo_country || '',
+    uf: geoData.geo_uf || ''
 };
-    console.log('Lead enviado:', dados);
+
+console.log('Lead enviado:', dados);
 
     try {
 
