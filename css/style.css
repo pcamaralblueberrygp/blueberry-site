@@ -406,6 +406,45 @@ h2{
     margin:0 auto;
 }
 
+/* =========================
+   SERVICE CONTENT
+========================= */
+
+.service-content h3{
+
+    color:var(--blue);
+
+    font-size:1.6rem;
+
+    margin-top:45px;
+
+    margin-bottom:18px;
+
+}
+
+.service-content p{
+
+    margin-bottom:20px;
+
+}
+
+.service-content ul{
+
+    margin:20px 0 30px 28px;
+
+}
+
+.service-content li{
+
+    margin-bottom:12px;
+
+}
+
+.service-content strong{
+
+    color:var(--blue);
+
+}
 
 /* =========================
    FOOTER
