@@ -371,3 +371,371 @@ p{
     flex-wrap:wrap;
 
 }
+
+/* =====================================================
+   08. SEÇÕES
+===================================================== */
+
+section:nth-of-type(even){
+
+    background:var(--light);
+
+}
+
+.contact,
+.hero,
+.footer{
+
+    background:none;
+
+}
+
+.cases,
+.markets,
+.service-content,
+.cta-final{
+
+    background:var(--light);
+
+}
+
+.clients,
+.services,
+.about{
+
+    background:#fff;
+
+}
+
+/* =====================================================
+   09. COMPONENTES
+===================================================== */
+
+.card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:36px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+/* =====================================================
+   10. CASES
+===================================================== */
+
+.cases-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.case-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:38px 34px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.case-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.case-number{
+
+    display:block;
+
+    color:var(--green);
+
+    font-size:2.8rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.case-card h3{
+
+    color:var(--blue);
+
+    font-size:1.6rem;
+
+    margin-bottom:16px;
+
+}
+
+.case-card p{
+
+    color:var(--text-light);
+
+}
+
+/* =====================================================
+   11. CLIENTES
+===================================================== */
+
+.clients-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:26px;
+
+    align-items:center;
+
+}
+
+.client-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    min-height:150px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:var(--transition);
+
+}
+
+.client-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.client-card img{
+
+    max-width:70%;
+
+    max-height:70%;
+
+}
+
+.client-card-dark{
+
+    background:var(--blue);
+
+    border:none;
+
+}
+
+.client-card-dark img{
+
+    max-width:58%;
+
+}
+
+/* =====================================================
+   12. MERCADOS
+===================================================== */
+
+.market-list{
+
+    max-width:950px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:var(--text-light);
+
+    font-size:1.15rem;
+
+    line-height:2.2;
+
+}
+
+/* =====================================================
+   13. SERVIÇOS
+===================================================== */
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.service-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:36px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.service-card h3{
+
+    color:var(--blue);
+
+    margin-bottom:18px;
+
+    font-size:1.45rem;
+
+}
+
+.service-card p{
+
+    color:var(--text-light);
+
+}
+
+/* =====================================================
+   14. COMO FUNCIONA
+===================================================== */
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.service-item{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:36px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.service-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.service-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:22px;
+
+}
+
+.service-header i{
+
+    width:56px;
+
+    height:56px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#eef5d2;
+
+    color:var(--green);
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.service-item h3{
+
+    margin:0;
+
+    color:var(--blue);
+
+    font-size:1.5rem;
+
+}
+
+.service-item p{
+
+    margin:0;
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+}
+
