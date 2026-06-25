@@ -406,84 +406,100 @@ h2{
     margin:0 auto;
 }
 
+```css
 /* =========================
    SERVICE CONTENT
 ========================= */
 
-```css
+.service-content{
+
+    background:#fff;
+
+}
+
 .service-grid{
 
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:35px;
+    gap:32px;
 
     margin-top:60px;
 
 }
 
-.service-step{
+.service-item{
+
+    padding:30px;
+
+    border-radius:18px;
+
+    border:1px solid #edf1f5;
 
     background:#fff;
 
-    border-radius:20px;
-
-    padding:40px;
-
-    box-shadow:0 12px 35px rgba(0,0,0,.06);
+    box-shadow:0 8px 22px rgba(0,0,0,.05);
 
     transition:.3s;
 
 }
 
-.service-step:hover{
+.service-item:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
+    box-shadow:0 16px 35px rgba(0,0,0,.10);
 
 }
 
-.service-icon{
+.service-header{
 
-    width:70px;
+    display:flex;
 
-    height:70px;
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:18px;
+
+}
+
+.service-header i{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     border-radius:50%;
 
     background:#eef5d2;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    margin-bottom:25px;
-
-}
-
-.service-icon i{
-
-    font-size:28px;
-
     color:var(--green);
 
+    font-size:22px;
+
+    flex-shrink:0;
+
 }
 
-.service-step h3{
+.service-item h3{
+
+    margin:0;
 
     color:var(--blue);
 
-    margin-bottom:15px;
-
-    font-size:1.5rem;
+    font-size:1.6rem;
 
 }
 
-.service-step p{
+.service-item p{
 
     margin:0;
 
@@ -500,43 +516,7 @@ h2{
     }
 
 }
-
-
-.service-content h3{
-
-    color:var(--blue);
-
-    font-size:1.6rem;
-
-    margin-top:45px;
-
-    margin-bottom:18px;
-
-}
-
-.service-content p{
-
-    margin-bottom:20px;
-
-}
-
-.service-content ul{
-
-    margin:20px 0 30px 28px;
-
-}
-
-.service-content li{
-
-    margin-bottom:12px;
-
-}
-
-.service-content strong{
-
-    color:var(--blue);
-
-}
+```
 
 /* =========================
    FOOTER
