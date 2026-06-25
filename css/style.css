@@ -410,6 +410,98 @@ h2{
    SERVICE CONTENT
 ========================= */
 
+```css
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.service-step{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+.service-step:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.service-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#eef5d2;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.service-icon i{
+
+    font-size:28px;
+
+    color:var(--green);
+
+}
+
+.service-step h3{
+
+    color:var(--blue);
+
+    margin-bottom:15px;
+
+    font-size:1.5rem;
+
+}
+
+.service-step p{
+
+    margin:0;
+
+    line-height:1.8;
+
+}
+
+@media(max-width:768px){
+
+    .service-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
 .service-content h3{
 
     color:var(--blue);
