@@ -391,3 +391,349 @@ h3{
 
 }
 ```
+```css
+/* ==========================================================
+   SEÇÕES
+========================================================== */
+
+.cases,
+.service-content,
+.cta-final{
+
+    background:var(--light);
+
+}
+
+.clients,
+.services,
+.about{
+
+    background:#fff;
+
+}
+
+.contact{
+
+    background:var(--blue);
+
+}
+
+
+/* ==========================================================
+   GRID SYSTEM
+========================================================== */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:32px;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+
+/* ==========================================================
+   CARD BASE
+========================================================== */
+
+.case-card,
+.service-card,
+.service-item,
+.client-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:all .35s ease;
+
+}
+
+.case-card:hover,
+.service-card:hover,
+.service-item:hover,
+.client-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+/* ==========================================================
+   CASES
+========================================================== */
+
+.cases-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.case-card{
+
+    padding:38px;
+
+}
+
+.case-number{
+
+    display:block;
+
+    margin-bottom:20px;
+
+    color:var(--green);
+
+    font-size:2.8rem;
+
+    font-weight:700;
+
+}
+
+.case-card h3{
+
+    margin-bottom:18px;
+
+}
+
+.case-card p{
+
+    color:var(--text-light);
+
+}
+
+
+/* ==========================================================
+   CLIENTES
+========================================================== */
+
+.clients-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+
+    gap:24px;
+
+}
+
+.client-card{
+
+    min-height:150px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.client-card img{
+
+    max-width:72%;
+
+    max-height:72%;
+
+}
+
+.client-card-dark{
+
+    background:var(--blue);
+
+    border:none;
+
+}
+
+.client-card-dark img{
+
+    max-width:60%;
+
+}
+
+
+/* ==========================================================
+   MERCADOS
+========================================================== */
+
+.market-list{
+
+    max-width:980px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:var(--text-light);
+
+    font-size:1.12rem;
+
+    line-height:2.1;
+
+}
+
+
+/* ==========================================================
+   SERVIÇOS
+========================================================== */
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.service-card{
+
+    padding:36px;
+
+}
+
+.service-card h3{
+
+    margin-bottom:18px;
+
+}
+
+.service-card p{
+
+    color:var(--text-light);
+
+}
+
+
+/* ==========================================================
+   COMO FUNCIONA
+========================================================== */
+
+.service-content{
+
+    padding:110px 0;
+
+}
+
+.service-content .container{
+
+    max-width:1180px;
+
+}
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+    margin-top:55px;
+
+}
+
+.service-item{
+
+    padding:34px;
+
+}
+
+.service-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:22px;
+
+}
+
+.service-header i{
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#eef5d8;
+
+    color:var(--green);
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+.service-header h3{
+
+    margin:0;
+
+}
+
+.service-item p{
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+}
+
+.service-item ul{
+
+    margin-top:18px;
+
+    color:var(--text-light);
+
+}
+
+.service-item li{
+
+    margin-bottom:10px;
+
+}
+```
