@@ -1227,4 +1227,228 @@ h3{
 
 }
 ```
+```css
+/* ==========================================================
+   LINKS DO FOOTER
+========================================================== */
+
+.footer-links{
+
+    margin:36px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.footer-links span{
+
+    color:rgba(255,255,255,.30);
+
+}
+
+.footer-links a,
+.footer-link{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+.footer-links a:hover,
+.footer-link:hover{
+
+    color:var(--green);
+
+}
+
+
+/* ==========================================================
+   MICROINTERAÇÕES
+========================================================== */
+
+.case-card,
+.service-card,
+.service-item,
+.client-card,
+.btn-primary,
+.btn-header,
+.contact-form button,
+.whatsapp-float img{
+
+    will-change:transform;
+
+}
+
+.case-card:hover,
+.service-card:hover,
+.service-item:hover,
+.client-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.hero-buttons a:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/* ==========================================================
+   ACESSIBILIDADE
+========================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+
+    outline:3px solid rgba(164,198,27,.45);
+
+    outline-offset:3px;
+
+}
+
+
+/* ==========================================================
+   SELEÇÃO DE TEXTO
+========================================================== */
+
+::selection{
+
+    background:var(--green);
+
+    color:#fff;
+
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--blue);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--blue-dark);
+
+}
+
+
+/* ==========================================================
+   PREPARAÇÃO PARA COMPONENTES FUTUROS
+========================================================== */
+
+.card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.icon-circle{
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#eef5d8;
+
+    color:var(--green);
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+
+/* ==========================================================
+   HELPERS
+========================================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-0{
+
+    margin-top:0;
+
+}
+
+.mb-0{
+
+    margin-bottom:0;
+
+}
+
+.mb-lg{
+
+    margin-bottom:60px;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+```
 
