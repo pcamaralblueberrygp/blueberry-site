@@ -1,7 +1,7 @@
 ```css
 /* ==========================================================
    BLUEBERRY GROWTH & PERFORMANCE
-   STYLE.CSS v2
+   STYLE.CSS V3
 ========================================================== */
 
 
@@ -21,47 +21,31 @@
 
 
 /* ==========================================================
-   DESIGN SYSTEM
+   VARIÁVEIS
 ========================================================== */
 
 :root{
-
-    /* CORES */
 
     --blue:#24375d;
     --blue-dark:#09142f;
 
     --green:#a4c61b;
-    --green-dark:#8fb000;
+    --green-hover:#8fb000;
 
-    --light:#f7f9fc;
-    --white:#ffffff;
+    --light:#f5f7fa;
 
-    --text:#33445d;
-    --text-light:#70829d;
+    --text:#24375d;
+    --text-light:#66758d;
 
-    --border:#e7edf5;
+    --border:#e8edf5;
 
-    /* ESPAÇAMENTOS */
-
-    --space-xs:10px;
-    --space-sm:18px;
-    --space-md:28px;
-    --space-lg:42px;
-    --space-xl:70px;
-
-    /* COMPONENTES */
-
-    --radius:18px;
+    --radius:20px;
 
     --shadow:
-    0 12px 35px rgba(36,55,93,.08);
+    0 10px 35px rgba(36,55,93,.08);
 
     --shadow-hover:
-    0 22px 48px rgba(36,55,93,.15);
-
-    --transition:
-    .35s ease;
+    0 20px 45px rgba(36,55,93,.15);
 
 }
 
@@ -90,13 +74,13 @@ body{
 
     font-family:'Secrcode',Arial,sans-serif;
 
-    background:#fff;
-
     color:var(--text);
+
+    background:#fff;
 
     line-height:1.75;
 
-    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
 
 }
 
@@ -108,25 +92,13 @@ img{
 
 }
 
-a{
-
-    color:inherit;
-
-    text-decoration:none;
-
-}
-
-ul{
-
-    list-style-position:inside;
-
-}
-
 .container{
 
-    width:min(90%,1280px);
+    width:90%;
 
-    margin:auto;
+    max-width:1280px;
+
+    margin:0 auto;
 
 }
 
@@ -137,15 +109,15 @@ ul{
 
 section{
 
-    padding:110px 0;
+    padding:100px 0;
 
 }
 
 h1{
 
-    font-size:3.9rem;
+    font-size:3.6rem;
 
-    line-height:1.1;
+    line-height:1.12;
 
     color:#fff;
 
@@ -153,25 +125,23 @@ h1{
 
 h2{
 
-    font-size:2.7rem;
+    font-size:2.6rem;
+
+    text-align:center;
 
     color:var(--blue);
 
     margin-bottom:18px;
 
-    text-align:center;
-
-    line-height:1.2;
-
 }
 
 h3{
 
-    font-size:1.5rem;
+    font-size:1.55rem;
 
     color:var(--blue);
 
-    line-height:1.3;
+    margin-bottom:16px;
 
 }
 
@@ -179,11 +149,54 @@ h3{
 
     max-width:760px;
 
-    margin:0 auto 60px;
+    margin:0 auto 55px;
+
+    text-align:center;
 
     color:var(--text-light);
 
-    text-align:center;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    background:rgba(255,255,255,.96);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:0 2px 12px rgba(0,0,0,.05);
+
+}
+
+.header-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:105px;
+
+}
+
+.logo-header{
+
+    height:84px;
 
 }
 
@@ -205,13 +218,13 @@ h3{
 
     padding:18px 34px;
 
-    border-radius:16px;
+    border-radius:14px;
 
     font-weight:700;
 
-    transition:all .30s ease;
+    text-decoration:none;
 
-    cursor:pointer;
+    transition:.30s;
 
 }
 
@@ -233,9 +246,9 @@ h3{
 .btn-header:hover,
 .contact-form button:hover{
 
-    background:var(--green-dark);
+    background:var(--green-hover);
 
-    transform:translateY(-4px);
+    transform:translateY(-5px);
 
     box-shadow:var(--shadow-hover);
 
@@ -243,9 +256,9 @@ h3{
 
 .btn-secondary{
 
-    color:#fff;
+    border:2px solid rgba(255,255,255,.70);
 
-    border:2px solid rgba(255,255,255,.75);
+    color:#fff;
 
 }
 
@@ -255,54 +268,7 @@ h3{
 
     color:var(--blue);
 
-}
-
-
-/* ==========================================================
-   HEADER
-========================================================== */
-
-.header{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    background:rgba(255,255,255,.95);
-
-    backdrop-filter:blur(18px);
-
-    box-shadow:0 4px 20px rgba(0,0,0,.05);
-
-    z-index:999;
-
-}
-
-.header-container{
-
-    min-height:100px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-}
-
-.logo-header{
-
-    height:84px;
-
-}
-
-.btn-header{
-
-    min-width:220px;
+    transform:translateY(-5px);
 
 }
 
@@ -323,15 +289,19 @@ h3{
 
     text-align:center;
 
-    padding-top:100px;
+    padding-top:110px;
+
+    position:relative;
+
+    overflow:hidden;
 
     background:
 
     linear-gradient(
 
-        rgba(36,55,93,.88),
+        rgba(36,55,93,.82),
 
-        rgba(36,55,93,.88)
+        rgba(36,55,93,.82)
 
     ),
 
@@ -345,7 +315,11 @@ h3{
 
 .hero-content{
 
-    max-width:930px;
+    position:relative;
+
+    z-index:2;
+
+    max-width:920px;
 
 }
 
@@ -353,15 +327,15 @@ h3{
 
     display:inline-block;
 
-    margin-bottom:26px;
+    margin-bottom:24px;
 
     padding:10px 18px;
 
     border-radius:999px;
 
-    background:rgba(255,255,255,.08);
+    background:rgba(255,255,255,.12);
 
-    color:#d7e2f0;
+    color:#d9e3ef;
 
     font-size:.95rem;
 
@@ -371,9 +345,9 @@ h3{
 
     max-width:760px;
 
-    margin:32px auto 42px;
+    margin:28px auto 42px;
 
-    color:#eef2fa;
+    color:#eef3fb;
 
     font-size:1.18rem;
 
@@ -391,1064 +365,3 @@ h3{
 
 }
 ```
-```css
-/* ==========================================================
-   SEÇÕES
-========================================================== */
-
-.cases,
-.service-content,
-.cta-final{
-
-    background:var(--light);
-
-}
-
-.clients,
-.services,
-.about{
-
-    background:#fff;
-
-}
-
-.contact{
-
-    background:var(--blue);
-
-}
-
-
-/* ==========================================================
-   GRID SYSTEM
-========================================================== */
-
-.grid-2{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:32px;
-
-}
-
-.grid-3{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:28px;
-
-}
-
-.grid-4{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:28px;
-
-}
-
-
-/* ==========================================================
-   CARD BASE
-========================================================== */
-
-.case-card,
-.service-card,
-.service-item,
-.client-card{
-
-    background:#fff;
-
-    border:1px solid var(--border);
-
-    border-radius:20px;
-
-    box-shadow:var(--shadow);
-
-    transition:all .35s ease;
-
-}
-
-.case-card:hover,
-.service-card:hover,
-.service-item:hover,
-.client-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:var(--shadow-hover);
-
-}
-
-
-/* ==========================================================
-   CASES
-========================================================== */
-
-.cases-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:28px;
-
-}
-
-.case-card{
-
-    padding:38px;
-
-}
-
-.case-number{
-
-    display:block;
-
-    margin-bottom:20px;
-
-    color:var(--green);
-
-    font-size:2.8rem;
-
-    font-weight:700;
-
-}
-
-.case-card h3{
-
-    margin-bottom:18px;
-
-}
-
-.case-card p{
-
-    color:var(--text-light);
-
-}
-
-
-/* ==========================================================
-   CLIENTES
-========================================================== */
-
-.clients-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-
-    gap:24px;
-
-}
-
-.client-card{
-
-    min-height:150px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:20px;
-
-}
-
-.client-card img{
-
-    max-width:72%;
-
-    max-height:72%;
-
-}
-
-.client-card-dark{
-
-    background:var(--blue);
-
-    border:none;
-
-}
-
-.client-card-dark img{
-
-    max-width:60%;
-
-}
-
-
-/* ==========================================================
-   MERCADOS
-========================================================== */
-
-.market-list{
-
-    max-width:980px;
-
-    margin:auto;
-
-    text-align:center;
-
-    color:var(--text-light);
-
-    font-size:1.12rem;
-
-    line-height:2.1;
-
-}
-
-
-/* ==========================================================
-   SERVIÇOS
-========================================================== */
-
-.services-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:28px;
-
-}
-
-.service-card{
-
-    padding:36px;
-
-}
-
-.service-card h3{
-
-    margin-bottom:18px;
-
-}
-
-.service-card p{
-
-    color:var(--text-light);
-
-}
-
-
-/* ==========================================================
-   COMO FUNCIONA
-========================================================== */
-
-.service-content{
-
-    padding:110px 0;
-
-}
-
-.service-content .container{
-
-    max-width:1180px;
-
-}
-
-.service-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:28px;
-
-    margin-top:55px;
-
-}
-
-.service-item{
-
-    padding:34px;
-
-}
-
-.service-header{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    margin-bottom:22px;
-
-}
-
-.service-header i{
-
-    width:58px;
-
-    height:58px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:50%;
-
-    background:#eef5d8;
-
-    color:var(--green);
-
-    font-size:24px;
-
-    flex-shrink:0;
-
-}
-
-.service-header h3{
-
-    margin:0;
-
-}
-
-.service-item p{
-
-    color:var(--text-light);
-
-    line-height:1.9;
-
-}
-
-.service-item ul{
-
-    margin-top:18px;
-
-    color:var(--text-light);
-
-}
-
-.service-item li{
-
-    margin-bottom:10px;
-
-}
-```
-
-```css
-/* ==========================================================
-   SOBRE
-========================================================== */
-
-.about{
-
-    background:#fff;
-
-}
-
-.about-container{
-
-    display:grid;
-
-    grid-template-columns:360px 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-.about-image img{
-
-    width:100%;
-
-    border-radius:24px;
-
-    box-shadow:var(--shadow-hover);
-
-}
-
-.about-content h2{
-
-    text-align:left;
-
-    margin-bottom:26px;
-
-}
-
-.about-content p{
-
-    color:var(--text-light);
-
-    margin-bottom:22px;
-
-}
-
-
-/* ==========================================================
-   CONTATO
-========================================================== */
-
-.contact{
-
-    color:#fff;
-
-}
-
-.contact h2,
-.contact > .container > p{
-
-    color:#fff;
-
-}
-
-.contact-form{
-
-    max-width:860px;
-
-    margin:60px auto 0;
-
-    background:#fff;
-
-    border-radius:24px;
-
-    padding:45px;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.20);
-
-}
-
-.contact-form input,
-.contact-form textarea{
-
-    width:100%;
-
-    padding:18px 20px;
-
-    border:1px solid var(--border);
-
-    border-radius:14px;
-
-    margin-bottom:18px;
-
-    font-size:16px;
-
-    font-family:inherit;
-
-    transition:.3s;
-
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
-
-    outline:none;
-
-    border-color:var(--green);
-
-    box-shadow:0 0 0 4px rgba(164,198,27,.15);
-
-}
-
-.contact-form textarea{
-
-    min-height:180px;
-
-    resize:vertical;
-
-}
-
-.contact-form button{
-
-    width:100%;
-
-    margin-top:10px;
-
-}
-
-#successMessage{
-
-    color:var(--blue)!important;
-
-    font-weight:700;
-
-    text-align:center;
-
-}
-
-
-/* ==========================================================
-   CTA FINAL
-========================================================== */
-
-.cta-final{
-
-    text-align:center;
-
-}
-
-.cta-final .container{
-
-    max-width:900px;
-
-}
-
-.cta-final h2{
-
-    margin-bottom:24px;
-
-}
-
-.cta-final p{
-
-    color:var(--text-light);
-
-    margin-bottom:42px;
-
-}
-
-.cta-final .btn-primary{
-
-    display:inline-flex;
-
-}
-
-
-/* ==========================================================
-   FOOTER
-========================================================== */
-
-.footer{
-
-    background:linear-gradient(
-        135deg,
-        var(--blue-dark),
-        var(--blue)
-    );
-
-    color:#fff;
-
-    padding:80px 0 60px;
-
-}
-
-.footer-content{
-
-    text-align:center;
-
-}
-
-.footer-logo{
-
-    height:82px;
-
-    margin:0 auto 35px;
-
-}
-
-.footer-content p{
-
-    margin-bottom:12px;
-
-    color:rgba(255,255,255,.88);
-
-}
-
-.footer-link{
-
-    color:#fff;
-
-    transition:.3s;
-
-}
-
-.footer-link:hover{
-
-    color:var(--green);
-
-}
-
-.footer-links{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-    margin:35px 0;
-
-}
-
-.footer-links span{
-
-    color:rgba(255,255,255,.30);
-
-}
-
-.footer-links a{
-
-    color:#fff;
-
-    transition:.3s;
-
-}
-
-.footer-links a:hover{
-
-    color:var(--green);
-
-}
-
-.footer-divider{
-
-    width:220px;
-
-    height:1px;
-
-    background:rgba(255,255,255,.15);
-
-    margin:35px auto;
-
-}
-
-
-/* ==========================================================
-   WHATSAPP
-========================================================== */
-
-.whatsapp-float{
-
-    position:fixed;
-
-    right:28px;
-
-    bottom:28px;
-
-    z-index:999;
-
-    transition:.35s;
-
-}
-
-.whatsapp-float img{
-
-    width:78px;
-
-    height:78px;
-
-    border-radius:50%;
-
-    box-shadow:0 18px 45px rgba(0,0,0,.25);
-
-    transition:.35s;
-
-}
-
-.whatsapp-float:hover{
-
-    transform:translateY(-6px);
-
-}
-
-.whatsapp-float:hover img{
-
-    transform:scale(1.08);
-
-}
-
-
-/* ==========================================================
-   RESPONSIVO
-========================================================== */
-
-@media (max-width:992px){
-
-    h1{
-
-        font-size:3rem;
-
-    }
-
-    h2{
-
-        font-size:2.2rem;
-
-    }
-
-    .cases-grid,
-    .services-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-    .service-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .about-container{
-
-        grid-template-columns:1fr;
-
-        text-align:center;
-
-    }
-
-    .about-content h2{
-
-        text-align:center;
-
-    }
-
-}
-
-
-@media (max-width:768px){
-
-    section{
-
-        padding:80px 0;
-
-    }
-
-    .header{
-
-        position:relative;
-
-    }
-
-    .header-container{
-
-        flex-direction:column;
-
-        justify-content:center;
-
-        gap:20px;
-
-        padding:20px 0;
-
-    }
-
-    .logo-header{
-
-        height:72px;
-
-    }
-
-    .btn-header{
-
-        width:100%;
-
-        max-width:280px;
-
-    }
-
-    .hero{
-
-        min-height:auto;
-
-        padding:90px 0;
-
-    }
-
-    h1{
-
-        font-size:2.3rem;
-
-    }
-
-    h2{
-
-        font-size:2rem;
-
-    }
-
-    .hero-buttons{
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
-    .btn-primary,
-    .btn-secondary{
-
-        width:100%;
-
-        max-width:320px;
-
-    }
-
-    .cases-grid,
-    .services-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .clients-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-    .contact-form{
-
-        padding:28px;
-
-    }
-
-    .whatsapp-float{
-
-        right:18px;
-
-        bottom:18px;
-
-    }
-
-    .whatsapp-float img{
-
-        width:68px;
-
-        height:68px;
-
-    }
-
-}
-```
-```css
-/* ==========================================================
-   LINKS DO FOOTER
-========================================================== */
-
-.footer-links{
-
-    margin:36px 0;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-}
-
-.footer-links span{
-
-    color:rgba(255,255,255,.30);
-
-}
-
-.footer-links a,
-.footer-link{
-
-    color:#fff;
-
-    text-decoration:none;
-
-    transition:var(--transition);
-
-}
-
-.footer-links a:hover,
-.footer-link:hover{
-
-    color:var(--green);
-
-}
-
-
-/* ==========================================================
-   MICROINTERAÇÕES
-========================================================== */
-
-.case-card,
-.service-card,
-.service-item,
-.client-card,
-.btn-primary,
-.btn-header,
-.contact-form button,
-.whatsapp-float img{
-
-    will-change:transform;
-
-}
-
-.case-card:hover,
-.service-card:hover,
-.service-item:hover,
-.client-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.hero-buttons a:hover{
-
-    transform:translateY(-4px);
-
-}
-
-
-/* ==========================================================
-   ACESSIBILIDADE
-========================================================== */
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible{
-
-    outline:3px solid rgba(164,198,27,.45);
-
-    outline-offset:3px;
-
-}
-
-
-/* ==========================================================
-   SELEÇÃO DE TEXTO
-========================================================== */
-
-::selection{
-
-    background:var(--green);
-
-    color:#fff;
-
-}
-
-
-/* ==========================================================
-   SCROLLBAR
-========================================================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#eef2f7;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:var(--blue);
-
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:var(--blue-dark);
-
-}
-
-
-/* ==========================================================
-   PREPARAÇÃO PARA COMPONENTES FUTUROS
-========================================================== */
-
-.card{
-
-    background:#fff;
-
-    border:1px solid var(--border);
-
-    border-radius:20px;
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
-
-}
-
-.card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:var(--shadow-hover);
-
-}
-
-.icon-circle{
-
-    width:58px;
-
-    height:58px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:50%;
-
-    background:#eef5d8;
-
-    color:var(--green);
-
-    font-size:24px;
-
-    flex-shrink:0;
-
-}
-
-
-/* ==========================================================
-   HELPERS
-========================================================== */
-
-.text-center{
-
-    text-align:center;
-
-}
-
-.mt-0{
-
-    margin-top:0;
-
-}
-
-.mb-0{
-
-    margin-bottom:0;
-
-}
-
-.mb-lg{
-
-    margin-bottom:60px;
-
-}
-
-.hidden{
-
-    display:none;
-
-}
-```
-
