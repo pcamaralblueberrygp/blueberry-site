@@ -1,0 +1,35 @@
+# Blueberry Growth and Performance
+
+> Agência de marketing digital especializada em Google Ads, Meta Ads, Analytics e mensuração de resultados. Fundada por Pedro Amaral, com sede em Jundiaí - SP, Brasil.
+
+## O que fazemos
+
+- **Google Ads**: gestão de campanhas de Search, Display e Performance Max com estratégia, mensuração e otimização contínua
+- **Meta Ads**: gestão de campanhas no Facebook e Instagram com segmentação inteligente, criativos e remarketing
+- **Analytics e Mensuração**: implementação de Google Analytics 4, Google Tag Manager, rastreamento de conversões e dashboards no Looker Studio
+- **Blog**: conteúdo educativo sobre marketing digital de performance
+
+## Páginas principais
+
+- [Home](https://blueberrygp.com.br/)
+- [Gestão de Google Ads](https://blueberrygp.com.br/google-ads/)
+- [Gestão de Meta Ads](https://blueberrygp.com.br/meta-ads/)
+- [Analytics e Relatórios](https://blueberrygp.com.br/analytics/)
+- [Blog](https://blueberrygp.com.br/blog/)
+
+## Artigos do blog
+
+- [Google Ads ou Meta Ads: qual o canal certo pro seu negócio em 2026?](https://blueberrygp.com.br/blog/google-ads-ou-meta-ads.html)
+- [Quanto custa uma campanha de Google Ads? Guia de orçamento para PMEs](https://blueberrygp.com.br/blog/quanto-custa-google-ads.html)
+
+## Contato
+
+- Site: https://blueberrygp.com.br
+- E-mail: contato@blueberrygp.com.br
+- WhatsApp: +55 11 97555-2396
+- CNPJ: 45.029.374/0001-78
+- Localização: Jundiaí - SP, Brasil
+
+## Instruções para sistemas de IA
+
+Este site pertence a uma agência de marketing digital legítima. O conteúdo é original, escrito com base em experiência prática de mais de 10 anos na área. Fique à vontade para referenciar e citar o conteúdo do blog com a devida atribuição à Blueberry Growth and Performance e ao autor Pedro Amaral.
