@@ -294,6 +294,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         font-weight: 400;
     }
 
+    .cpc-table{
+        width: 100%;
+        border-collapse: collapse;
+        margin: 28px 0;
+        font-size: .88rem;
+    }
+
+    .cpc-table th{
+        background: var(--blue);
+        color: #fff;
+        padding: 12px 14px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .cpc-table th:first-child{ border-radius: 10px 0 0 0; }
+    .cpc-table th:last-child{ border-radius: 0 10px 0 0; }
+
+    .cpc-table td{
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-light);
+    }
+
+    .cpc-table tr:last-child td{ border-bottom: none; }
+    .cpc-table tr:nth-child(even) td{ background: var(--light); }
+
     @media(max-width:700px){
         .post-container{ padding: 32px 24px; }
         .post-compare{ grid-template-columns: 1fr; }
@@ -312,25 +339,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- HEADER -->
 
-<header class="header">
+    <header class="header">
 
-    <div class="container header-container">
+        <div class="container header-container">
 
-        <a href="/">
-            <img src="/img/logo-header-color.png"
-                alt="Blueberry Growth and Performance"
-                class="logo-header">
-        </a>
+            <a href="/">
+                <img src="/img/logo-header-color.png"
+                    alt="Blueberry Growth and Performance"
+                    class="logo-header">
+            </a>
 
-        <a href="https://wa.me/5511975552396"
-            target="_blank"
-            class="btn-header">
-            Falar no WhatsApp
-        </a>
+        <nav class="nav-main" id="navMain">
+            <a href="/google-ads/">Google Ads</a>
+            <a href="/meta-ads/">Meta Ads</a>
+            <a href="/analytics/">Analytics</a>
+        </nav>
+            <div class="header-right">
 
-    </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
 
-</header>
+                <a href="https://wa.me/5511975552396"
+                    target="_blank"
+                    class="btn-header">
+                    Falar no WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
 
 <!-- HERO DO POST -->
 
@@ -518,6 +558,148 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 A análise correta considera histórico de busca, comportamento do consumidor no seu segmento, ticket médio e margem — não apenas qual plataforma está em alta no momento.
             </p>
 
+            <h2>Comparativo técnico: estrutura e formatos de cada plataforma</h2>
+
+            <p>
+                Além da diferença estratégica, as duas plataformas funcionam de forma técnica bastante distinta. Entender essa estrutura ajuda a planejar campanhas com mais precisão.
+            </p>
+
+            <table class="cpc-table">
+                <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Google Ads</th>
+                        <th>Meta Ads</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Princípio</td>
+                        <td>Captura de demanda (intenção)</td>
+                        <td>Criação de demanda (interesse)</td>
+                    </tr>
+                    <tr>
+                        <td>Formatos principais</td>
+                        <td>Texto, Shopping, Display, YouTube</td>
+                        <td>Imagem, Vídeo, Carrossel, Stories, Reels</td>
+                    </tr>
+                    <tr>
+                        <td>Segmentação base</td>
+                        <td>Palavras-chave e intenção de busca</td>
+                        <td>Interesses, comportamentos e dados demográficos</td>
+                    </tr>
+                    <tr>
+                        <td>Tempo de revisão</td>
+                        <td>Poucas horas</td>
+                        <td>Até 24 horas</td>
+                    </tr>
+                    <tr>
+                        <td>Orçamento mínimo</td>
+                        <td>R$ 1/dia por campanha</td>
+                        <td>R$ 5/dia por conjunto de anúncios</td>
+                    </tr>
+                    <tr>
+                        <td>Taxa de conversão média</td>
+                        <td>~3,75%</td>
+                        <td>~0,9%</td>
+                    </tr>
+                    <tr>
+                        <td>CPC médio no Brasil</td>
+                        <td>R$ 4 a R$ 25 (varia por setor)</td>
+                        <td>R$ 0,80 a R$ 3,00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Como cada plataforma segmenta o público</h2>
+
+            <h3>Segmentação no Google Ads</h3>
+
+            <p>
+                No Google, o ponto de partida é a <strong>palavra-chave</strong> — o que o usuário digitou na busca. A partir daí, é possível refinar por:
+            </p>
+
+            <ul>
+                <li><strong>Localização:</strong> cidade, bairro, raio em torno de um endereço</li>
+                <li><strong>Horário e dia da semana:</strong> ajuste de lances por período de maior conversão</li>
+                <li><strong>Dispositivo:</strong> mobile, desktop, tablet</li>
+                <li><strong>Audiências de remarketing:</strong> quem já visitou o site ou interagiu com a marca</li>
+                <li><strong>Audiências de intenção:</strong> usuários que o Google identifica como em fase de compra</li>
+            </ul>
+
+            <h3>Segmentação no Meta Ads</h3>
+
+            <p>
+                No Meta, a segmentação parte do perfil do usuário — não do que ele está buscando agora, mas do que ele é, faz e consome:
+            </p>
+
+            <ul>
+                <li><strong>Interesses:</strong> categorias de conteúdo que o usuário curte e interage</li>
+                <li><strong>Comportamentos:</strong> hábitos de compra, uso de dispositivos, viagens recentes</li>
+                <li><strong>Dados demográficos:</strong> idade, gênero, escolaridade, situação de relacionamento</li>
+                <li><strong>Públicos personalizados:</strong> listas de clientes, visitantes do site, engajamento com o perfil</li>
+                <li><strong>Lookalike:</strong> usuários semelhantes aos seus melhores clientes</li>
+            </ul>
+
+            <h2>O que cada plataforma exige em termos de criativo</h2>
+
+            <p>
+                Esse é um ponto crítico que muitas empresas ignoram na hora de escolher o canal.
+            </p>
+
+            <p>
+                <strong>Google Ads (Rede de Pesquisa)</strong> é baseado em texto: título, descrição e extensões de anúncio. Não exige imagens ou vídeos para funcionar — o diferencial é a <strong>copywriting</strong> e a relevância para a palavra-chave. Ideal para quem não tem estrutura de produção visual.
+            </p>
+
+            <p>
+                <strong>Meta Ads</strong> é essencialmente visual. A qualidade e relevância do criativo (imagem ou vídeo) é o principal fator de performance — muito mais do que a segmentação. Sem bons criativos, as campanhas perdem eficiência rapidamente. Isso exige estrutura de produção ou uma boa parceria criativa.
+            </p>
+
+            <div class="post-highlight">
+                "No Google, o texto convence. No Meta, a imagem ou o vídeo para o scroll. São habilidades diferentes — e ambas precisam ser bem executadas."
+            </div>
+
+            <h2>Métricas diferentes: o que acompanhar em cada canal</h2>
+
+            <p>
+                Cada plataforma tem sua lógica de resultado. Comparar as mesmas métricas entre os dois canais pode gerar conclusões equivocadas.
+            </p>
+
+            <p><strong>No Google Ads, acompanhe:</strong></p>
+            <ul>
+                <li>CTR (taxa de cliques): indica se o anúncio é relevante para a busca</li>
+                <li>Índice de qualidade: reflete a relevância do anúncio e da página de destino</li>
+                <li>CPC médio: custo por clique, que varia por palavra-chave</li>
+                <li>Taxa de conversão da página: quantos cliques viram leads ou vendas</li>
+                <li>Custo por conversão (CPL ou CPA)</li>
+            </ul>
+
+            <p><strong>No Meta Ads, acompanhe:</strong></p>
+            <ul>
+                <li>CPM (custo por mil impressões): reflete a competição pelo espaço no feed</li>
+                <li>CTR do criativo: indica se o anúncio está parando o scroll</li>
+                <li>Frequência: quantas vezes a mesma pessoa viu o anúncio (alto = criativo saturado)</li>
+                <li>Custo por resultado (lead, clique, compra)</li>
+                <li>ROAS: retorno sobre o investimento em anúncios</li>
+            </ul>
+
+            <h2>FAQ: perguntas frequentes sobre Google Ads vs Meta Ads</h2>
+
+            <p><strong>Qual canal tem menor custo por clique?</strong></p>
+            <p>O Meta Ads costuma ter CPC menor — entre R$ 0,80 e R$ 3,00 contra R$ 4 a R$ 25 no Google. Mas clique mais barato não significa resultado mais barato: a taxa de conversão do Google é cerca de 4x maior, o que equilibra o custo final por lead ou venda.</p>
+
+            <p><strong>Posso começar com R$ 1.000/mês em ambos os canais?</strong></p>
+            <p>Tecnicamente sim, mas não é o ideal. Com R$ 1.000, é melhor focar em um canal e dominá-lo antes de diversificar. Dividir o orçamento ao meio reduz o volume de dados e dificulta a otimização em ambas as plataformas.</p>
+
+            <p><strong>Google Ads funciona para e-commerce?</strong></p>
+            <p>Sim — especialmente com campanhas de Google Shopping e Performance Max, que exibem os produtos diretamente nas buscas com imagem e preço. É um dos canais com maior retorno para e-commerce com catálogo de produtos.</p>
+
+            <p><strong>Meta Ads funciona para B2B?</strong></p>
+            <p>Funciona, mas com ressalvas. O LinkedIn costuma ser mais eficiente para B2B técnico. O Meta pode ser útil para alcançar decisores em empresas menores, mas a segmentação profissional é menos precisa do que no Google ou LinkedIn.</p>
+
+            <p><strong>Como saber qual está trazendo mais resultado?</strong></p>
+            <p>Com mensuração correta: Google Analytics 4, rastreamento de conversões em ambas as plataformas e um dashboard que consolide os dados. Sem isso, qualquer conclusão é subjetiva. Esse é um dos pilares do trabalho da Blueberry — você pode <a href="/analytics/">saber mais sobre mensuração aqui</a>.</p>
+
             <h2>Conclusão</h2>
 
             <p>
@@ -599,5 +781,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </footer>
 
+
+<script>
+(function(){
+    var btn = document.getElementById('navToggle');
+    var nav = document.getElementById('navMain');
+    if(btn && nav){
+        btn.addEventListener('click', function(){
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        });
+        document.addEventListener('click', function(e){
+            if(!btn.contains(e.target) && !nav.contains(e.target)){
+                nav.classList.remove('open');
+                btn.classList.remove('open');
+            }
+        });
+    }
+})();
+</script>
 </body>
 </html>
