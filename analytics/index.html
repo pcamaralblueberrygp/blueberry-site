@@ -54,6 +54,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+<style>
+.services-grid{
+    grid-template-columns: repeat(3, 1fr);
+}
+@media(max-width:900px){
+    .services-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width:600px){
+    .services-grid{ grid-template-columns: 1fr; }
+}
+</style>
+
 </head>
 
 <body>
@@ -79,6 +91,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="/google-ads/">Google Ads</a>
             <a href="/meta-ads/">Meta Ads</a>
             <a href="/analytics/">Analytics</a>
+            <a href="/blog/">Blog</a>
         </nav>
 
         <div class="header-right">
@@ -293,48 +306,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Nem todo número é relevante. Focamos nas métricas que têm relação direta com o crescimento do negócio.
         </p>
 
-        <div class="markets-grid">
-
-            <div class="market-item">
-                <i class="fa-solid fa-dollar-sign"></i>
-                <span>Custo por Lead (CPL)</span>
-            </div>
-
-            <div class="market-item">
-                <i class="fa-solid fa-user-plus"></i>
-                <span>Custo de Aquisição (CAC)</span>
-            </div>
-
-            <div class="market-item">
-                <i class="fa-solid fa-arrow-trend-up"></i>
-                <span>ROAS por Canal</span>
-            </div>
-
-            <div class="market-item">
-                <i class="fa-solid fa-percent"></i>
-                <span>Taxa de Conversão</span>
-            </div>
-
-            <div class="market-item">
-                <i class="fa-solid fa-route"></i>
-                <span>Jornada do Usuário</span>
-            </div>
-
-            <div class="market-item">
-                <i class="fa-solid fa-funnel-dollar"></i>
-                <span>Drop-off no Funil</span>
-            </div>
-
-            <div class="market-item">
-                <i class="fa-solid fa-repeat"></i>
-                <span>Taxa de Retorno</span>
-            </div>
-
-            <div class="market-item">
-                <i class="fa-solid fa-clock"></i>
-                <span>Tempo até Conversão</span>
-            </div>
-
+        <div class="market-list">
+            Custo por Lead (CPL) &nbsp;•&nbsp;
+            Custo de Aquisição (CAC) &nbsp;•&nbsp;
+            ROAS por Canal &nbsp;•&nbsp;
+            Taxa de Conversão &nbsp;•&nbsp;
+            Jornada do Usuário &nbsp;•&nbsp;
+            Drop-off no Funil &nbsp;•&nbsp;
+            Taxa de Retorno &nbsp;•&nbsp;
+            Tempo até Conversão
         </div>
 
     </div>
@@ -478,7 +458,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     target="_blank"
     class="whatsapp-float"
     aria-label="WhatsApp">
-    <img src="/img/whatsapp.png" alt="WhatsApp">
+    <img src="/img/icon-wpp.png" alt="WhatsApp">
 </a>
 
 <script>
