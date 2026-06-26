@@ -89,27 +89,38 @@ style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- HEADER -->
 
-<header class="header">
+    <header class="header">
 
-    <div class="container header-container">
+        <div class="container header-container">
 
-        <a href="/">
-            <img src="/img/logo-header-color.png"
-                 alt="Blueberry Growth and Performance"
-                 class="logo-header">
-        </a>
+            <a href="/">
+                <img src="/img/logo-header-color.png"
+                    alt="Blueberry Growth and Performance"
+                    class="logo-header">
+            </a>
 
-        <a href="https://wa.me/5511975552396?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20gestão%20de%20Meta%20Ads"
-           target="_blank"
-           class="btn-header">
+        <nav class="nav-main" id="navMain">
+            <a href="/google-ads/">Google Ads</a>
+            <a href="/meta-ads/">Meta Ads</a>
+            <a href="/analytics/">Analytics</a>
+        </nav>
+            <div class="header-right">
 
-            Falar no WhatsApp
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
 
-        </a>
+                <a href="https://wa.me/5511975552396?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20gest%C3%A3o%20de%20Meta%20Ads"
+                    target="_blank"
+                    class="btn-header">
+                    Falar no WhatsApp
+                </a>
 
-    </div>
+            </div>
 
-</header>
+        </div>
+
+    </header>
 
 <!-- HERO -->
 
@@ -854,6 +865,25 @@ console.log(
 
 </script>
 
+
+<script>
+(function(){
+    var btn = document.getElementById('navToggle');
+    var nav = document.getElementById('navMain');
+    if(btn && nav){
+        btn.addEventListener('click', function(){
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        });
+        document.addEventListener('click', function(e){
+            if(!btn.contains(e.target) && !nav.contains(e.target)){
+                nav.classList.remove('open');
+                btn.classList.remove('open');
+            }
+        });
+    }
+})();
+</script>
 </body>
 
 </html>
