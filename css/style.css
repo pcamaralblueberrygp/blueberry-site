@@ -490,6 +490,22 @@ h3{
 
 }
 
+.client-card.bg-dark,
+.client-card.client-card-dark{
+
+    background:var(--blue) !important;
+
+    border:none !important;
+
+}
+
+.client-card.bg-dark img,
+.client-card.client-card-dark img{
+
+    max-width:58%;
+
+}
+
 .client-card:hover{
 
     transform:translateY(-6px);
