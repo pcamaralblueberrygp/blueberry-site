@@ -72,6 +72,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet"
         href="css/style.css">
 
+
+<style>
+.reviews{background:var(--light);padding:80px 0;}
+.reviews h2{text-align:center;margin-bottom:8px;}
+.reviews .section-description{text-align:center;margin-bottom:12px;}
+.reviews-stars{text-align:center;font-size:1.5rem;color:#f5a623;margin-bottom:40px;letter-spacing:2px;}
+.reviews-stars span{color:var(--text-light);font-size:.95rem;margin-left:8px;vertical-align:middle;}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.review-card{background:#fff;border-radius:var(--radius);padding:28px;border:1px solid var(--border);display:flex;flex-direction:column;gap:12px;}
+.review-stars{color:#f5a623;font-size:1rem;letter-spacing:1px;}
+.review-text{color:var(--text);font-size:.95rem;line-height:1.6;flex:1;}
+.review-author{font-weight:700;color:var(--text);font-size:.9rem;}
+.review-meta{color:var(--text-light);font-size:.8rem;}
+@media(max-width:900px){.reviews-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.reviews-grid{grid-template-columns:1fr;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Blueberry Growth and Performance","url":"https://blueberrygp.com.br","telephone":"+55-11-97555-2396","address":{"@type":"PostalAddress","addressLocality":"Jundiaí","addressRegion":"SP","addressCountry":"BR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"5","bestRating":"5","worstRating":"1"},"review":[{"@type":"Review","author":{"@type":"Person","name":"Érica Freitas"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"A agência é excelente. Pedro é extremamente competente, atencioso e dedicado aos seus clientes. O atendimento é de alta qualidade e transmite muita confiança. Recomendo fortemente!"},{"@type":"Review","author":{"@type":"Person","name":"Aryane Aryane"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Pedro é incrível! Super atencioso e nos entregou sempre ótimos resultados!!"},{"@type":"Review","author":{"@type":"Person","name":"Renato Negrão"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Super prestativos e com foco em resultados, sem enrolação e com muito cuidado em alocar corretamente o investimento."},{"@type":"Review","author":{"@type":"Person","name":"Maryeli Nonato"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Desde que comecei a trabalhar com a Blueberry, o desempenho da minha clínica melhorou significativamente. Tivemos um aumento no número de clientes e, consequentemente, no faturamento. Recomendo muito!"},{"@type":"Review","author":{"@type":"Person","name":"Gabriela Amaral"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Nos ajudou muito a trazer mais pacientes para a clínica, a melhorar nossos anúncios e a direcionar o público que desejávamos. Melhor decisão que tomamos para a empresa."}]}
+</script>
 </head>
 
 <body>
@@ -452,7 +471,58 @@ Fashion • Casa e Decoração • Educação • Seguros • Financeiro • Sa�
 
     <!-- CTA FINAL -->
 
-    <section class="cta-final">
+    
+<section class="reviews">
+    <div class="container">
+        <h2>O que nossos clientes dizem</h2>
+        <p class="section-description">Avaliações reais de empresas que cresceram com a Blueberry.</p>
+        <div class="reviews-stars">★★★★★ <span>5,0 · 5 avaliações no Google</span></div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"A agência é excelente. Pedro é extremamente competente, atencioso e dedicado aos seus clientes. O atendimento é de alta qualidade e transmite muita confiança. Recomendo fortemente!"</p>
+                <div>
+                    <div class="review-author">Érica Freitas</div>
+                    <div class="review-meta">Avaliação no Google</div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Pedro é incrível! Super atencioso e nos entregou sempre ótimos resultados!!"</p>
+                <div>
+                    <div class="review-author">Aryane Aryane</div>
+                    <div class="review-meta">Avaliação no Google</div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Super prestativos e com foco em resultados, sem enrolação e com muito cuidado em alocar corretamente o investimento."</p>
+                <div>
+                    <div class="review-author">Renato Negrão</div>
+                    <div class="review-meta">Avaliação no Google</div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Desde que comecei a trabalhar com a Blueberry, o desempenho da minha clínica melhorou significativamente. Tivemos um aumento no número de clientes e, consequentemente, no faturamento. Recomendo muito! O Pedro é extremamente atencioso e prestativo."</p>
+                <div>
+                    <div class="review-author">Maryeli Nonato</div>
+                    <div class="review-meta">Avaliação no Google</div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Nos ajudou muito a trazer mais pacientes para a clínica, a melhorar nossos anúncios e a direcionar o público que desejávamos. Melhor decisão que tomamos para a empresa."</p>
+                <div>
+                    <div class="review-author">Gabriela Amaral</div>
+                    <div class="review-meta">Avaliação no Google</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-final">
 
         <div class="container">
 
