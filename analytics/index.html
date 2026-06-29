@@ -53,7 +53,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" href="/img/favicon.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
 
 <style>
 .services-grid{
@@ -412,6 +413,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- FOOTER -->
 
+</main>
+
 <footer class="footer">
 
     <div class="container footer-content">
@@ -459,7 +462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     target="_blank"
     class="whatsapp-float"
     aria-label="WhatsApp">
-    <img src="/img/icon-wpp.png" alt="WhatsApp">
+    <img src="/img/icon-wpp.png" alt="WhatsApp" width="56" height="56">
 </a>
 
 <script>
