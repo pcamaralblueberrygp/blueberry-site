@@ -89,6 +89,8 @@ img{
 
     max-width:100%;
 
+    height:auto;
+
 }
 
 .container{
@@ -194,6 +196,8 @@ h3{
 .logo-header{
 
     height:84px;
+
+    width:auto;
 
 }
 
@@ -1002,6 +1006,8 @@ h3{
 .footer-logo{
 
     height:82px;
+
+    width:auto;
 
     margin:0 auto 32px;
 
