@@ -52,6 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link rel="icon" href="/img/favicon.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preload" as="image" href="/img/banner-linkedin.jpeg" fetchpriority="high">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
@@ -86,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/">
             <img src="/img/logo-header-color.png"
                 alt="Blueberry Growth and Performance"
-                class="logo-header">
+                class="logo-header" fetchpriority="high" decoding="async">
         </a>
 
         <nav class="nav-main" id="navMain">
@@ -330,7 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container about-container">
 
         <div class="about-image">
-            <img src="/img/pedro.jpeg" alt="Pedro Amaral">
+            <img src="/img/pedro.jpeg" alt="Pedro Amaral" loading="lazy" decoding="async" width="500" height="500">
         </div>
 
         <div class="about-content">
@@ -421,7 +422,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <img src="/img/logo-footer-white.png"
             alt="Blueberry Growth and Performance"
-            class="footer-logo">
+            class="footer-logo" loading="lazy" decoding="async" width="700" height="180">
 
         <p>Google Ads • Meta Ads • Analytics • Performance</p>
 
@@ -462,7 +463,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     target="_blank"
     class="whatsapp-float"
     aria-label="WhatsApp">
-    <img src="/img/icon-wpp.png" alt="WhatsApp" width="56" height="56">
+    <img src="/img/icon-wpp.png" alt="WhatsApp" width="56" height="56" decoding="async" fetchpriority="low">
 </a>
 
 <script>
