@@ -1494,3 +1494,30 @@ h3{
     }
 
 }
+
+/* ==========================================================
+   Faixa 901-1150px: a nav com 5 itens nao cabe no espacamento
+   padrao (gap 32px + logo 84px + botao com padding 34px).
+   Abaixo de 900px o menu hamburguer ja assume.
+   ========================================================== */
+@media (min-width:901px) and (max-width:1150px){
+
+    .logo-header{
+        height:70px;
+    }
+
+    .nav-main{
+        gap:20px;
+    }
+
+    .nav-main a{
+        font-size:.84rem;
+    }
+
+    .btn-header{
+        padding:14px 22px;
+        font-size:.88rem;
+        white-space:nowrap;
+    }
+
+}
