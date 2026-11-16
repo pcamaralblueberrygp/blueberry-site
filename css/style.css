@@ -1521,3 +1521,48 @@ h3{
     }
 
 }
+
+/* ==========================================================
+   Mapa de links no rodape — garante que todas as paginas de
+   servico tenham entrada de link interno, nao so as do menu.
+   ========================================================== */
+.footer-nav{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    max-width:900px;
+    margin:46px auto 10px;
+    text-align:left;
+}
+
+.footer-col h3{
+    color:#fff;
+    font-size:.95rem;
+    font-weight:700;
+    margin-bottom:14px;
+}
+
+.footer-col a{
+    display:block;
+    color:rgba(255,255,255,.72);
+    font-size:.88rem;
+    line-height:1.45;
+    padding:6px 0;
+    text-decoration:none;
+    transition:color .2s;
+}
+
+.footer-col a:hover{
+    color:var(--green);
+}
+
+@media (max-width:768px){
+
+    .footer-nav{
+        grid-template-columns:1fr;
+        gap:26px;
+        max-width:320px;
+        text-align:center;
+    }
+
+}
