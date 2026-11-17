@@ -1,0 +1,38 @@
+name: IndexNow
+
+# Avisa o Bing (e os demais buscadores do protocolo IndexNow) sempre que
+# uma página HTML muda no main. Espera o deploy do GitHub Pages antes.
+on:
+  push:
+    branches: [main]
+    paths: ['**.html']
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Esperar o deploy do GitHub Pages
+        run: sleep 90
+
+      - name: Enviar URLs alteradas
+        env:
+          HOST: blueberrygp.com.br
+          KEY: 1887a302587ca05b74e2fc6ad9e4e2a4
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if git cat-file -e "$BEFORE" 2>/dev/null; then
+            FILES=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- '*.html')
+          else
+            FILES=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- '*.html')
+          fi
+          URLS=$(printf '%s\n' "$FILES" | grep -v -e '^404.html$' -e '^$' | sed -e 's#index\.html$##' -e "s#^#https://$HOST/#" || true)
+          if [ -z "$URLS" ]; then echo "Nenhuma página alterada."; exit 0; fi
+          echo "$URLS"
+          JSON=$(printf '%s\n' "$URLS" | jq -R . | jq -s --arg h "$HOST" --arg k "$KEY" \
+            '{host:$h, key:$k, keyLocation:("https://"+$h+"/"+$k+".txt"), urlList:.}')
+          curl -sS -o /dev/null -w "IndexNow HTTP %{http_code}\n" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" -d "$JSON"
